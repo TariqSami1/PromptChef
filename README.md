@@ -1,16 +1,42 @@
-# React + Vite
+PromptChef
+A lightweight React app that turns your random leftover ingredients into a complete meal. Just type in at least four ingredients you have on hand, and the app instantly generates an easy-to-follow, beautifully formatted recipe.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+No ads or long food blogs—just you, your ingredients, and instant meal ideas.
 
-Currently, two official plugins are available:
+Built With
+React: Utilizes functional components and React state management to handle dynamic user inputs, loading screens, and UI updates seamlessly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Groq API: Powers the AI generation with lightning-fast inference, returning complete recipes in a fraction of a second.
 
-## React Compiler
+React-Markdown: Safely parses the raw AI output into clean HTML headings, lists, and paragraphs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Vite: For a fast and optimized frontend build environment.
 
-## Expanding the ESLint configuration
+How It Works
+Enter a minimum of 4 ingredients you currently have in your kitchen.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Submit the form.
+
+PromptChef pings the Groq API and returns a beautifully structured markdown recipe tailored to your pantry.
+
+Run It Locally
+1. Clone the repository:
+
+Bash
+git clone https://github.com/TariqSami1/PromptChef.git
+cd PromptChef
+
+2. Install dependencies:
+
+Bash
+npm install
+3.Set up your environment variables:
+Create a .env file in the root directory and add your free Groq API key:
+
+Code snippet
+VITE_GROQ_API_KEY=gsk_your_api_key_here
+
+4.Start the development server:
+
+Bash
+npm run dev
